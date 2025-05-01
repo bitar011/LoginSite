@@ -5,13 +5,22 @@
     font-family: 'Poppins', sans-serif;
 }
 
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url(/assets/background\ site\ form.png) no-repeat;
+    background-size:cover;
+    background-position: center;
+}
+
 header{
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     padding: 20px 100px;
-    background: red;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -69,4 +78,18 @@ header{
 .navbar .loginBtn:hover{
     background: white;
     color: #162938;
+}
+
+.container{
+    position: relative;
+    width: 400px;
+    height: 440px;
+    background: transparent;
+    border: 2px solid black;
+    border-radius: 20px;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
