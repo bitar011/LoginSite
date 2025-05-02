@@ -18,7 +18,9 @@
     </header>
 
     <div class="container">
-        <div class="loginBox">
+        <span class="iconClose"><ion-icon name="close"></ion-icon></span>
+
+        <div class="formBox login">
             <h2>Login</h2>
             <form action="#">
                 <div class="textbox">
@@ -39,7 +41,39 @@
                 </div>
                 <button type="submit" class="btn">Login</button>
                 <div class="login-register">
-                    <p>Don't have an account? <a href="#">Register</a></p>
+                    <p>Don't have an account? <a class="register-link" href="#">Register</a></p>
+                </div>
+            </form    
+        </div>
+
+
+        <div class="formBox register">
+            <h2>Registration</h2>
+            <form action="#">
+                <div class="textbox">
+                    <span class="icon"><ion-icon name="person"></ion-icon></span>
+                    <input type="text" required>
+                    <label>User</label>
+                </div>
+                <div class="textbox">
+                    <span class="icon"><ion-icon name="mail"></ion-icon></span>
+                    <input type="email" required>
+                    <label>Email</label>
+                </div>
+                <div class="textbox">
+                    <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
+                    <input type="password" required>
+                    <label>Password</label>
+                </div>
+                
+
+                <div class="remember-forgot">
+                    <label><input type="checkbox">Concordo com todos os termos & condições.</label>
+                      
+                </div>
+                <button type="submit" class="btn">Register</button>
+                <div class="login-register">
+                    <p>Ja tem uma conta? <a class="login-link" href="#">Login</a></p>
                 </div>
             </form    
         </div>
