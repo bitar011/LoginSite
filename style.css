@@ -77,7 +77,7 @@ header{
 
 .navbar .loginBtn:hover{
     background: white;
-    color: #162938;
+    color: white;
 }
 
 .container{
@@ -89,11 +89,17 @@ header{
     border-radius: 20px;
     backdrop-filter: blur(20px);
     box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    /* overflow: hidden; */
+    overflow: hidden;
+    transform: scale(0);
+    transition: transform .5s ease, height .2s ease;
+}
+
+.container.active-popup{
+    transform: scale(1);
+}
+
+.container.active{
+    height: 520px;
 }
 
 .container .iconClose{
@@ -102,7 +108,7 @@ header{
     right: 0;
     width: 45px;
     height: 45px;
-    background: #162938;
+    background: black;
     font-size: 2em;
     color: white;
     display: flex;
@@ -113,32 +119,40 @@ header{
     z-index: 1;
 }
 
-.container .formBox{
+.container .formBox {
+    position: absolute; /* Posiciona as boxes dentro do container */
+    top: 0;
     width: 100%;
+    height: 100%;
     padding: 40px;
-
+    transition: transform 0.5s ease; /* Suaviza a transição */
 }
 
-/* .container .formBox.login{
-    display: none;
-}  */
-
-.container .formBox.register{
-    position: absolute;
-    transform: translateX(400px);
+.container .formBox.login {
+    left: 0; /* Login começa no lado esquerdo */
 }
+
+.container .formBox.register {
+    left: 100%; /* Registro fica fixo ao lado direito do container */
+}
+
+.container.active .formBox.login {
+    transform: translateX(-100%); /* Move o login para fora da tela à esquerda */
+}
+
+/* A box de registro não precisa de transform, pois ela já está fixa ao lado direito */
 
 .formBox h2{
     text-align: center;
     font-size: 2em;
-    color: #162938;
+    color: white;
 }
 
 .textbox{
     position: relative;
     width: 100%;
     height: 50px;
-    border-bottom: 2px solid #162938;
+    border-bottom: 2px solid white;
     margin: 30px 0;
 }
 
@@ -146,7 +160,7 @@ header{
     position: absolute;
     top: 50%;
     left: 5px;
-    color: #162938;
+    color: white;
     font-size: 1em;
     transform: translateY(-50%);
     font-weight: 500;
@@ -167,7 +181,7 @@ header{
     border: none;
     outline: none;
     font-size: 1em;
-    color: #162938;
+    color: white;
     font-weight: 600;
     padding: 0 35px 0 5px;
 }
@@ -176,13 +190,13 @@ header{
     position: absolute;
     right: 8px;
     font-size: 1.2em;
-    color: #162938;
+    color: white;
     line-height: 57px;   
 }
 
 .remember-forgot{
     font-size: .9em;
-    color: #162938;
+    color: white;
     font-weight: 500;
     margin: -15px 0 15px;
     display: flex;
@@ -190,12 +204,12 @@ header{
 }
 
 .remember-forgot label input{
-    accent-color: #162938;
+    accent-color: white;
     margin-right: 3px;
 }
 
 .remember-forgot a{
-    color: #162938;
+    color:white;
     text-decoration: none;
 }
 .remember-forgot a:hover{
@@ -205,26 +219,26 @@ header{
 .btn{
     width: 100%;
     height: 45px;
-    background: #162938;
+    background: white;
     border: none;
     outline: none;
     border-radius: 6px;
     cursor: pointer;
     font-size: 1em;
     font-weight: 500;
-    color: white;
+    color: black;
 }
 
 .login-register{
     font-size: .9em;
-    color: #162938;
+    color:white;
     text-align: center;
     font-weight: 500;
     margin: 25px 0 10px;
 }
 
 .login-register p a{
-    color: #162938;
+    color: white;
     text-decoration: none;
     font-weight: 600;
 }
