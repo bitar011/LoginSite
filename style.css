@@ -245,3 +245,134 @@ header{
 .login-register p a:hover{
     text-decoration: underline;
 }
+
+/* Estilos responsivos */
+@media (max-width: 1024px) {
+    header {
+        padding: 20px 50px;
+    }
+
+    .navbar a {
+        font-size: 1em;
+        margin-left: 20px;
+    }
+
+    .navbar .loginBtn {
+        width: 100px;
+        height: 40px;
+        font-size: 1em;
+        margin-left: 20px;
+    }
+
+    .container {
+        width: 350px;
+        height: 400px;
+    }
+
+    .container.active {
+        height: 480px;
+    }
+
+    .formBox h2 {
+        font-size: 1.8em;
+    }
+
+    .textbox {
+        margin: 20px 0;
+    }
+
+    .textbox input {
+        font-size: 0.9em;
+    }
+
+    .btn {
+        height: 40px;
+        font-size: 0.9em;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        padding: 15px 30px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar a {
+        margin: 10px 0;
+    }
+
+    .navbar .loginBtn {
+        margin: 10px 0;
+    }
+
+    .container {
+        width: 300px;
+        height: 380px;
+    }
+
+    .container.active {
+        height: 450px;
+    }
+
+    .formBox h2 {
+        font-size: 1.6em;
+    }
+
+    .textbox input {
+        font-size: 0.8em;
+    }
+
+    .btn {
+        height: 35px;
+        font-size: 0.8em;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 10px 20px;
+    }
+
+    .navbar a {
+        font-size: 0.9em;
+    }
+
+    .navbar .loginBtn {
+        width: 90px;
+        height: 35px;
+        font-size: 0.8em;
+    }
+
+    .container {
+        width: 260px;
+        height: 350px;
+    }
+
+    .container.active {
+        height: 420px;
+    }
+
+    .formBox h2 {
+        font-size: 1.4em;
+    }
+
+    .textbox input {
+        font-size: 0.7em;
+    }
+
+    .btn {
+        height: 30px;
+        font-size: 0.7em;
+    }
+
+    .login-register {
+        font-size: 0.8em;
+    }
+}
