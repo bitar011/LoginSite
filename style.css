@@ -140,7 +140,9 @@ header{
     transform: translateX(-100%); /* Move o login para fora da tela à esquerda */
 }
 
-/* A box de registro não precisa de transform, pois ela já está fixa ao lado direito */
+.container.active .formBox.register {
+    transform: translateX(-100%); /* Move o formulário de registro para dentro da tela */
+}
 
 .formBox h2{
     text-align: center;
